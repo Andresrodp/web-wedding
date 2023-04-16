@@ -9,7 +9,7 @@ export default function Home() {
     router.push(`/content/${code}`)
   }
   return (
-    <div className="flex flex-col w-full py-6 items-center h-screen bg-zinc-100 font-serif">
+    <div className="flex flex-col w-full py-6 items-center bg-gradient-to-tr from-slate-100 to-slate-600 h-screen bg-zinc-100 font-serif">
       <h1 className="text-blue-900 text-xl font-medium">Home</h1>
       <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col w-4/5 p-4 items-center rounded-md shadow-lg bg-slate-400 shadow-slate-500">
         <input className="rounded-md w-4/5 text-slate-950 " type="text" />
