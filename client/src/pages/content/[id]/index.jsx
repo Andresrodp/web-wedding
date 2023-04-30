@@ -30,7 +30,13 @@ const content = () => {
       </div>
       <SaltoLinea />
       <SaludoInicial nombre="Panda" acompanante="Panda" />
-      <button onClick={handleClick}>Inicio</button>
+      <SaltoLinea />
+      <iframe className="rounded-md " width="90%" height="240vh" src="https://www.youtube.com/embed/HdyJwSxWUFg" title="YouTube video player" frameBorder="0" ></iframe>
+      <SaltoLinea />
+      <SaludoInicial nombre="Información" acompanante="Boda" />
+      <SaltoLinea />
+      <SaludoInicial nombre="Regalos" acompanante="Sugerencia" />
+      <button className="rounded-sm bg-tertiary shadow-tertiary px-5 py-3 items-center" onClick={handleClick}>Inicio</button>
     </div>
   )
 }
