@@ -4,6 +4,7 @@ import img from "../../../../assets/titulo.png";
 import SaltoLinea from "@/components/saltoLinea.jsx";
 import SaludoInicial from "@/components/saludoInicial";
 import InfoBoda from "@/components/infoBoda";
+import Regalos from "@/components/regalos"
 
 const content = () => {
   const router = useRouter()
@@ -37,8 +38,8 @@ const content = () => {
       <SaltoLinea />
       <InfoBoda />
       <SaltoLinea />
-      <SaludoInicial nombre="Regalos" acompanante="Sugerencia" />
-      <button className="rounded-sm bg-tertiary shadow-tertiary px-5 py-3 items-center" onClick={handleClick}>Inicio</button>
+      <Regalos />
+      <button className="rounded-sm bg-tertiary shadow-tertiary px-5 py-3 items-center" onClick={handleClick}>Confirmo Asistencia</button>
     </div>
   )
 }
