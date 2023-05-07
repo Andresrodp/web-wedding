@@ -3,6 +3,8 @@ import Image from "next/image";
 import img from "../../../../assets/titulo.png";
 import SaltoLinea from "@/components/saltoLinea.jsx";
 import SaludoInicial from "@/components/saludoInicial";
+import InfoBoda from "@/components/infoBoda";
+
 const content = () => {
   const router = useRouter()
   const { id } = router.query
@@ -33,7 +35,7 @@ const content = () => {
       <SaltoLinea />
       <iframe className="rounded-md " width="90%" height="240vh" src="https://www.youtube.com/embed/HdyJwSxWUFg" title="YouTube video player" frameBorder="0" ></iframe>
       <SaltoLinea />
-      <SaludoInicial nombre="Información" acompanante="Boda" />
+      <InfoBoda />
       <SaltoLinea />
       <SaludoInicial nombre="Regalos" acompanante="Sugerencia" />
       <button className="rounded-sm bg-tertiary shadow-tertiary px-5 py-3 items-center" onClick={handleClick}>Inicio</button>
