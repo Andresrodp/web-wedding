@@ -10,7 +10,11 @@ const invitadosSchema = new mongoose.Schema({
         required: true
     },
     acompanantes: {
-        type: Array,
+        type: [String],
+    },
+    confirmado: {
+        type: Boolean,
+        default: false
     },
 });
 
