@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-
+import portada from '../../assets/images/portada.jpg'
 export default function Home() {
   const router = useRouter()
 
@@ -9,11 +9,11 @@ export default function Home() {
     router.push(`/content/${code}`)
   }
   return (
-    <div className="flex flex-col w-full py-6 items-center bg-gradient-to-tr from-slate-100 to-slate-600 h-screen bg-zinc-100 font-serif">
-      <h1 className="text-blue-900 text-xl font-medium">Home</h1>
-      <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col w-4/5 p-4 items-center rounded-md shadow-lg bg-slate-400 shadow-slate-500">
+    <div className="flex flex-col w-full justify-center bg-secondary bg-cover py-6 items-center h-screen font-serif">
+      <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col w-4/5 p-4 gap-5 items-center rounded-md shadow-lg bg-primary">
+        <label className="text-xl text-quinary font-bold ">Home</label>
         <input className="rounded-md w-4/5 text-quinary" type="text" />
-        <button className="my-3 w-2/5 px-2 py-4 bg-gradient-to-r from-slate-500 to-slate-900 rounded-lg shadow-md shadow-stone-700/50 hover:bg-stone-200 transition active:translate-y-1" type="submit">Ingresar</button>
+        <button className="my-3 w-2/5 px-2 py-4 rounded-lg shadow-md bg-quaternary transition active:translate-y-1" type="submit">Ingresar</button>
       </form>
     </div>
   )
