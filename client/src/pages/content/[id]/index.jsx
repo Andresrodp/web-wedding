@@ -1,4 +1,6 @@
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Image from "next/image";
 import img from "../../../../assets/titulo.png";
 import SaltoLinea from "@/components/saltoLinea.jsx";
@@ -6,9 +8,24 @@ import SaludoInicial from "@/components/saludoInicial";
 import InfoBoda from "@/components/infoBoda";
 import Regalos from "@/components/regalos"
 
+const doomie = {
+  nombre: "Doomie",
+  apellido: "Doom",
+  acompanantes: ["Dipie", "Dapie"],
+  confirmado: false,
+}
 const content = () => {
   const router = useRouter()
   const { id } = router.query
+  const [content, setContent] = useState({})
+
+  useEffect(() => {
+    // axios.get(`http://localhost:3000/api/invitados/${id}`)
+    //   .then((res) => {
+    //     setContent(res.data)
+    //   })
+    setContent(doomie)
+  }, [])
   const handleClick = () => {
     router.push("/")
   }
@@ -32,7 +49,7 @@ const content = () => {
         </div>
       </div>
       <SaltoLinea />
-      <SaludoInicial nombre="Panda" acompanante="Panda" />
+      <SaludoInicial nombre={content.nombre} apellido={content.apellido} acompanantes={content.acompanantes} />
       <SaltoLinea />
       <iframe className="rounded-md " width="90%" height="240vh" src="https://www.youtube.com/embed/HdyJwSxWUFg" title="YouTube video player" frameBorder="0" ></iframe>
       <SaltoLinea />
