@@ -9,7 +9,7 @@ const InfoBoda = () => {
         <p>Hora: 5:30 PM</p>
         <p>capilla del Museo del Chicó</p>
         <div className="flex flex-row justify-center items-center gap-1">
-          <CiLocationOn /><p>Carrera 7 #93-01</p>
+          <CiLocationOn /><p>Bogotá, Carrera 7 #93-01</p>
         </div>
       </div>
       <br />
@@ -19,7 +19,7 @@ const InfoBoda = () => {
         <p>Hora: 8:00 PM</p>
         <p>Castillo del Mono Osorio</p>
         <div className="flex flex-row justify-center items-center gap-1">
-          <CiLocationOn /><p>Carrera 3 #74-00</p>
+          <CiLocationOn /><p>Bogotá, Carrera 3 #74-00</p>
         </div>
       </div>
       <br />
@@ -27,7 +27,7 @@ const InfoBoda = () => {
         <h1 className="text-lg font-semibold">Código de Vestuario</h1>
         <p>Traje de Gala</p>
         <h4 className="font-semibold">Colores reversados: </h4>
-        <p>Blanco y Vinotinto</p>
+        <p>Blanco y Azul</p>
       </div>
 
     </section>

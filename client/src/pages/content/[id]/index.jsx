@@ -10,8 +10,9 @@ import Regalos from "@/components/regalos"
 import slider1 from "../../../../assets/images/slider-1.jpg";
 import slider2 from "../../../../assets/images/slider-2.jpg";
 import slider3 from "../../../../assets/images/slider-3.jpg";
-import slider4 from "../../../../assets/images/slider-4.jpg";
+import slider4 from "../../../../assets/images/slider-4.JPG";
 import slider5 from "../../../../assets/images/slider-5.jpg";
+import Swal from "sweetalert2";
 
 const doomie = {
   nombre: "Doomie",
@@ -25,14 +26,23 @@ const content = () => {
   const [content, setContent] = useState({})
 
   useEffect(() => {
-    // axios.get(`http://localhost:3000/api/invitados/${id}`)
-    //   .then((res) => {
-    //     setContent(res.data)
-    //   })
-    setContent(doomie)
+    axios.get(`http://localhost:3000/api/invitados/${id}`)
+      .then((res) => {
+        setContent(res.data)
+      })
+    // setContent(doomie)
   }, [])
   const handleClick = () => {
-    router.push("/")
+    axios.get(`http://localhost:3000/api/invitados/confirm/${content._id}`).then((res) => {
+      Swal.fire({
+        icon: 'success',
+        title: 'Confirmación exitosa',
+        text: res.data.message,
+        confirmButtonText: 'Ok'
+      }).then(() => {
+        router.push('/confirmacion')
+      })
+    })
   }
   return (
     <div className="bg-primary flex flex-col items-center h-auto p-5 w-full gap-3">
@@ -59,12 +69,13 @@ const content = () => {
       <SaltoLinea />
       <SaludoInicial nombre={content.nombre} apellido={content.apellido} acompanantes={content.acompanantes} />
       <SaltoLinea />
-      <iframe className="rounded-md " width="90%" height="240vh" src="https://www.youtube.com/embed/HdyJwSxWUFg" title="YouTube video player" frameBorder="0" ></iframe>
+      <iframe className="rounded-md " width="90%" height="240vh" src="https://www.youtube.com/embed/l1cyuIR5PTc" title="YouTube video player" frameBorder="0" allowFullScreen allow="autoplay; encrypted-media"></iframe>
       <SaltoLinea />
       <InfoBoda />
       <SaltoLinea />
       <Regalos />
-      <button className="rounded-sm bg-tertiary shadow-tertiary px-5 py-3 items-center" onClick={handleClick}>Confirmo Asistencia</button>
+      {content.confirmado ? <h1 className="text-quinary text-lg font-semibold font-serif mb-3">Ya confirmaste tu asistencia</h1> :
+        <button className="rounded-sm bg-tertiary shadow-tertiary px-5 py-3 items-center" onClick={handleClick}>Confirmo Asistencia</button>}
     </div>
   )
 }
