@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import portada from '../../assets/images/portada.jpg'
 export default function Home() {
   const router = useRouter()
 
