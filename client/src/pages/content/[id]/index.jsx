@@ -6,12 +6,7 @@ import img from "../../../../assets/titulo.png";
 import SaltoLinea from "@/components/saltoLinea.jsx";
 import SaludoInicial from "@/components/saludoInicial";
 import InfoBoda from "@/components/infoBoda";
-import Regalos from "@/components/regalos"
-import slider1 from "../../../../assets/images/slider-1.jpg";
-import slider2 from "../../../../assets/images/slider-2.jpg";
-import slider3 from "../../../../assets/images/slider-3.jpg";
-import slider4 from "../../../../assets/images/slider-4.png";
-import slider5 from "../../../../assets/images/slider-5.jpg";
+import Regalos from "@/components/regalos";
 import Swal from "sweetalert2";
 
 const content = () => {
@@ -44,19 +39,19 @@ const content = () => {
       </div>
       <div className="snap-mandatory snap-x h-4/6 w-full flex items-center justify-start gap-1 overflow-scroll xl:flex xl:h-4/5 xl:w-full xl:gap-2 xl:overflow-scroll xl:items-start">
         <div className="bg-cover w-4/5 h-full shrink-0 snap-center rounded-md xl:w-4/5 xl:h-3/5 xl:aspect-video">
-          <Image className="aspect-video object-cover rounded-md xl:object-cover xl:aspect-video " src={slider1} alt="" />
+          <img className="aspect-video object-cover object-center rounded-md xl:aspect-video" src="https://res.cloudinary.com/do1akn4ua/image/upload/v1685804855/web-wedding/slider-1_n5nvoa.jpg" alt="" />
         </div>
         <div className="w-4/5 h-full shrink-0 snap-center bg-cover rounded-md">
-          <Image className="aspect-video object-cover object-top rounded-md xl:aspect-video" src={slider2} alt="" />
+          <img className="aspect-video object-cover object-top rounded-md xl:aspect-video" src='https://res.cloudinary.com/do1akn4ua/image/upload/v1685804874/web-wedding/slider-2_wcpycm.jpg' alt="" />
         </div>
         <div className="bg-cover w-4/5 h-full shrink-0 snap-center rounded-md">
-          <Image className="aspect-video object-cover object-top rounded-md xl:aspect-video" src={slider3} alt="" />
+          <img className="aspect-video object-cover object-top rounded-md xl:aspect-video" src='https://res.cloudinary.com/do1akn4ua/image/upload/v1685804874/web-wedding/slider-3_eywt7s.jpg' alt="" />
         </div>
         <div className="bg-cover w-4/5 h-full shrink-0 snap-center rounded-md">
-          <Image className="aspect-video object-cover rounded-md xl:aspect-video" src={slider4} alt="" />
+          <img className="aspect-video object-cover rounded-md xl:aspect-video" src='https://res.cloudinary.com/do1akn4ua/image/upload/v1685807116/web-wedding/slider-4_rje07w.jpg' alt="" />
         </div>
         <div className="bg-cover w-4/5 h-full shrink-0 snap-center rounded-md">
-          <Image className="aspect-video object-cover rounded-md xl:aspect-video" src={slider5} alt="" />
+          <img className="aspect-video object-cover rounded-md xl:aspect-video" src='https://res.cloudinary.com/do1akn4ua/image/upload/v1685804874/web-wedding/slider-5_maegen.jpg' alt="" />
         </div>
       </div>
       <SaltoLinea />
