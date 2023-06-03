@@ -14,26 +14,19 @@ import slider4 from "../../../../assets/images/slider-4.JPG";
 import slider5 from "../../../../assets/images/slider-5.jpg";
 import Swal from "sweetalert2";
 
-const doomie = {
-  nombre: "Doomie",
-  apellido: "Doom",
-  acompanantes: ["Dipie", "Dapie"],
-  confirmado: false,
-}
 const content = () => {
   const router = useRouter()
   const { id } = router.query
   const [content, setContent] = useState({})
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/invitados/${id}`)
-      .then((res) => {
-        setContent(res.data)
-      })
-    // setContent(doomie)
+    axios.get(`https://api-boda.up.railway.app/api/invitados/${id}`).then((res) => {
+      setContent(res.data)
+    })
+    console.log(router);
   }, [])
   const handleClick = () => {
-    axios.get(`http://localhost:3000/api/invitados/confirm/${content._id}`).then((res) => {
+    axios.get(`https://api-boda.up.railway.app/api/invitados/confirm/${content._id}`).then((res) => {
       Swal.fire({
         icon: 'success',
         title: 'Confirmación exitosa',
